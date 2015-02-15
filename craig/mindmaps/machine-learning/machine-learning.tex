@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% machine-learning.tex
+%
+% Description:
+%     A mind map of machine learning concepts.
+%
+% Author:
+%     Craig Struble <strubleca@yahoo.com>
+%
+% Created On:
+%     Sat Feb 14 14:54:25 PST 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Machine Learning}
+    [clockwise from=45]
+    child[concept color=green!50!black, level distance=250] {
+      node[concept] {models}
+      [clockwise from=160]
+      child { 
+          node[concept] {kernel} 
+          [clockwise from=180]
+          child { node[concept] {support vector machines} }
+      }
+      child { node[concept] {rules} }
+      child { node[concept] {trees} }
+      child { node[concept] {neural networks} }
+      child { 
+          node[concept] {statistical} 
+          [clockwise from=-30]
+          child { node[concept] {hidden Markov} }
+          child { node[concept] {Markov random fields} }
+          child { node[concept] {maximum entropy} }
+          child { node[concept] {conditional random fields} }
+          child { node[concept] {Bayesian networks} }
+      }
+    }  
+    child[concept color=blue, grow=-30] {
+      node[concept] {features}
+      [clockwise from=0]
+      child { node[concept] {selection} }
+      child { node[concept] {induction} }
+    }
+    child[concept color=purple, grow=-80, level distance=250] {
+        node[concept] {applications}
+        [clockwise from=-55]
+        child { node[concept] {natural language processing} }
+        child { node[concept] {segmentation} }
+        child { node[concept] {classification} }
+        child { node[concept] {prediction} }
+        child { node[concept] {description} }
+        child { node[concept] {recommendation} }
+    }
+    child[concept color=red] { 
+      node[concept] {algorithms} 
+      [clockwise from=-90]
+      child { node[concept] {expectation maximization} }
+      child { node[concept] {Markov chain Monte Carlo} }
+      child { node[concept] {dynamic programming} }
+    }
+    child[concept color=orange, grow=135] { 
+      node[concept] {styles} 
+      [clockwise from=-90]
+      child { node[concept] {un\-supervised} }
+      child { node[concept] {supervised} }
+      child { node[concept] {semi-supervised} }
+      child { node[concept] {active} }
+      child { node[concept] {reinforcement} }
+    };
+\end{tikzpicture}
